@@ -8,7 +8,8 @@ Dostępne opcje:
 - Trybu wprowadzania: DirectInput lub Raw (uniwersalny),
 - Analogowe lub cyfrowe triggery w trybie DirectInput (nacisk na analogowe triggery zmienia się wraz z położeniem miejsca naciśnięcia triggera; im bliżej bocznej krawędzi przycisku LT lub RT najbliższej środka ekranu, tym nacisk jest większy),
 - Funkcja żyroskopu (w DirectInput żyroskop zastępuje jedną z gałek analogowych, natomiast w trybie Raw są to dodatkowe 2 osie),
-- Wybór gałki analogowej, która ma zostać zastąpiona przez żyroskop w trybie DirectInput.
+- Wybór gałki analogowej, która ma zostać zastąpiona przez żyroskop w trybie DirectInput,
+- Czułość żyroskopu.
 
 ![btGamepadMenu](https://github.com/DaveHanak/UMPAnUMiW-Projekt-BtGamepad/assets/72354597/98994f4e-ae68-48c5-9723-9c6e93e5394e)
 ![btGamepadGaming](https://github.com/DaveHanak/UMPAnUMiW-Projekt-BtGamepad/assets/72354597/f45826fa-9fcd-4a3b-9788-f612f238b1d6)
