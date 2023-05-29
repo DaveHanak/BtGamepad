@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="gray_pressed">#FF333333</color>
+    <color name="gray_released">#FF666666</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green_success">#FF00CC00</color>
+    <color name="red_failure">#FFCC0000</color>
+    <color name="yellow_info">#FFCCCC00</color>
+</resources>

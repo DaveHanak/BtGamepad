@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">BtGamepad</string>
+    <string name="app_ver">1.0</string>
+    <string name="menu">Menu</string>
+    <string name="gamepad">Gamepad</string>
+    <string name="preferences">Preferences</string>
+    <string name="pref_mode">Input mode</string>
+    <string name="pref_mode_dir">DirectInput</string>
+    <string name="pref_mode_raw">Raw (Universal)</string>
+    <string name="pref_gyro">Gyro function</string>
+    <string name="pref_on">ON</string>
+    <string name="pref_off">OFF</string>
+    <string name="pref_sens">Gyro sensitivity</string>
+    <string name="pref_side">DI mode gyro replaces</string>
+    <string name="pref_side_l">Left thumbstick</string>
+    <string name="pref_side_r">Right thumbstick</string>
+    <string name="pref_trig">DI mode triggers</string>
+    <string name="pref_trig_a">Analog</string>
+    <string name="pref_trig_d">Digital</string>
+    <string name="decimal">%d</string>
+    <string name="bluetooth_permission_granted">Bluetooth permission granted</string>
+    <string name="bluetooth_permission_denied">Bluetooth permission denied</string>
+    <string name="bluetooth_scan_permission_granted">Discoverable permission granted</string>
+    <string name="bluetooth_scan_permission_denied">Discoverable permission denied</string>
+    <string name="bluetooth_on">Bluetooth is now on</string>
+    <string name="bluetooth_off">Bluetooth is off</string>
+    <string name="device_enabled_nd">All set! Press \'Start\' again to make gamepad device discoverable</string>
+    <string name="device_enabled_d">All set! Connect to gamepad device</string>
+    <string name="device_disabled">Gamepad disabled</string>
+    <string name="device_off">Nothing to stop</string>
+    <string name="device_discoverable">Gamepad device is now discoverable</string>
+    <string name="device_not_discoverable">Gamepad device is not discoverable</string>
+    <string name="device_connected">Connected</string>
+    <string name="device_disconnected">Disconnected</string>
+    <string name="preferences_block">You need to disable the gamepad first before heading to preferences</string>
+</resources>

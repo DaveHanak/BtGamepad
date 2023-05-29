@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GamepadActivity">
+
+    <Button
+        android:id="@+id/left_button"
+        android:layout_width="198dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/button_round_edge"
+        android:tag="4"
+        android:text="LB"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/left_trigger" />
+
+    <Button
+        android:id="@+id/left_trigger"
+        android:layout_width="198dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/button_round_edge"
+        android:text="LT"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="99dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/button_round_edge"
+        android:tag="6"
+        android:text="BACK"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/left_button"
+        app:layout_constraintTop_toBottomOf="@+id/left_trigger" />
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="99dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="99dp"
+        android:background="@drawable/button_round_edge"
+        android:tag="7"
+        android:text="START"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/right_button"
+        app:layout_constraintTop_toBottomOf="@+id/right_trigger" />
+
+    <Button
+        android:id="@+id/right_button"
+        android:layout_width="198dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/button_round_edge"
+        android:tag="5"
+        android:text="RB"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/right_trigger" />
+
+    <Button
+        android:id="@+id/b_button"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="67dp"
+        android:background="@drawable/button_round"
+        android:tag="1"
+        android:text="B"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/right_thumbstick" />
+
+    <Button
+        android:id="@+id/y_button"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginEnd="77dp"
+        android:layout_marginBottom="66dp"
+        android:background="@drawable/button_round"
+        android:tag="3"
+        android:text="Y"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/a_button"
+        app:layout_constraintEnd_toStartOf="@+id/right_thumbstick" />
+
+    <Button
+        android:id="@+id/x_button"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginEnd="66dp"
+        android:layout_marginBottom="67dp"
+        android:background="@drawable/button_round"
+        android:tag="2"
+        android:text="X"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/b_button" />
+
+    <Button
+        android:id="@+id/a_button"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginEnd="77dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/button_round"
+        android:tag="0"
+        android:text="A"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/right_thumbstick" />
+
+    <Button
+        android:id="@+id/right_trigger"
+        android:layout_width="198dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/button_round_edge"
+        android:text="RT"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ne_dpad"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:background="@drawable/dpad_button_secondary"
+        android:rotation="180"
+        android:tag="up+right"
+        app:layout_constraintBottom_toTopOf="@+id/e_dpad"
+        app:layout_constraintStart_toEndOf="@+id/n_dpad" />
+
+    <Button
+        android:id="@+id/nw_dpad"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="11dp"
+        android:background="@drawable/dpad_button_secondary"
+        android:rotation="90"
+        android:tag="up+left"
+        app:layout_constraintBottom_toTopOf="@+id/w_dpad"
+        app:layout_constraintStart_toEndOf="@+id/left_thumbstick" />
+
+    <Button
+        android:id="@+id/w_dpad"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="11dp"
+        android:background="@drawable/dpad_button_primary"
+        android:rotation="270"
+        android:tag="left"
+        app:layout_constraintBottom_toTopOf="@+id/sw_dpad"
+        app:layout_constraintStart_toEndOf="@+id/left_thumbstick" />
+
+    <Button
+        android:id="@+id/s_dpad"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/dpad_button_primary"
+        android:rotation="180"
+        android:tag="down"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sw_dpad" />
+
+    <Button
+        android:id="@+id/sw_dpad"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/dpad_button_secondary"
+        android:rotation="0"
+        android:tag="down+left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/left_thumbstick" />
+
+    <Button
+        android:id="@+id/e_dpad"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="66dp"
+        android:background="@drawable/dpad_button_primary"
+        android:rotation="90"
+        android:tag="right"
+        app:layout_constraintBottom_toTopOf="@+id/se_dpad"
+        app:layout_constraintStart_toEndOf="@+id/w_dpad" />
+
+    <Button
+        android:id="@+id/se_dpad"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/dpad_button_secondary"
+        android:rotation="270"
+        android:tag="down+right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/s_dpad" />
+
+    <Button
+        android:id="@+id/n_dpad"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="66dp"
+        android:background="@drawable/dpad_button_primary"
+        android:rotation="0"
+        android:tag="up"
+        app:layout_constraintBottom_toTopOf="@+id/s_dpad"
+        app:layout_constraintStart_toEndOf="@+id/nw_dpad" />
+
+    <com.umpa.btgamepad.Thumbstick
+        android:id="@+id/left_thumbstick"
+        android:layout_width="198dp"
+        android:layout_height="198dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="1dp"
+        android:tag="8"
+        app:backgroundColor="@color/gray_released"
+        app:knobColor="@color/gray_pressed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.umpa.btgamepad.Thumbstick
+        android:id="@+id/right_thumbstick"
+        android:layout_width="198dp"
+        android:layout_height="198dp"
+        android:layout_gravity="bottom"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:tag="9"
+        app:backgroundColor="@color/gray_released"
+        app:knobColor="@color/gray_pressed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/forwardedMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="@string/gamepad"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/right_trigger"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/left_trigger"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

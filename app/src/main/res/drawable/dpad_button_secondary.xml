@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:state_pressed="false">
+    <vector android:height="100dp"
+        android:width="100dp"
+        android:viewportHeight="100"
+        android:viewportWidth="100" >
+        <path
+            android:name="triangle"
+            android:fillColor="@color/gray_released"
+            android:pathData="m 30,0 l 70,70 -70,0 z" />
+    </vector>
+</item>
+<item android:state_pressed="true">
+    <vector android:height="100dp"
+        android:width="100dp"
+        android:viewportHeight="100"
+        android:viewportWidth="100" >
+        <path
+            android:name="triangle"
+            android:fillColor="@color/gray_pressed"
+            android:pathData="m 30,0 l 70,70 -70,0 z" />
+    </vector>
+</item>
+</selector>
