@@ -11,6 +11,7 @@ Dostępne opcje:
 - Wybór gałki analogowej, która ma zostać zastąpiona przez żyroskop w trybie DirectInput,
 - Czułość żyroskopu.
 
-![btGamepadMenu](https://github.com/DaveHanak/UMPAnUMiW-Projekt-BtGamepad/assets/72354597/98994f4e-ae68-48c5-9723-9c6e93e5394e)
-![btGamepadGaming](https://github.com/DaveHanak/UMPAnUMiW-Projekt-BtGamepad/assets/72354597/f45826fa-9fcd-4a3b-9788-f612f238b1d6)
-![btGamepadPrefs](https://github.com/DaveHanak/UMPAnUMiW-Projekt-BtGamepad/assets/72354597/c10a11b0-daa3-4a49-8728-a6ca6c2bdf1c)
+
+![btgamepad1](https://github.com/DaveHanak/UMPAnUMiW-Projekt-BtGamepad/assets/72354597/7845692b-702a-4035-b743-7fa367564526)
+![btgamepad2](https://github.com/DaveHanak/UMPAnUMiW-Projekt-BtGamepad/assets/72354597/2b2efda5-d708-44f8-b2c9-e5891a5efe24)
+![btgamepad3](https://github.com/DaveHanak/UMPAnUMiW-Projekt-BtGamepad/assets/72354597/8701d30e-fbca-4c3d-be2b-2d2784bfa0e0)
