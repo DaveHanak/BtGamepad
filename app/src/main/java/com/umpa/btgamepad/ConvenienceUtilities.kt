@@ -30,7 +30,7 @@ fun Context.getBluetoothAdapter(): BluetoothAdapter? {
 }
 
 fun Context.isBluetoothEnabled(): Boolean {
-    return getBluetoothAdapter() != null
+    return getBluetoothAdapter()?.isEnabled ?: false
 }
 
 @SuppressLint("MissingPermission")
