@@ -9,9 +9,9 @@ Dostępne opcje:
 - Analogowe lub cyfrowe triggery w trybie DirectInput (nacisk na analogowe triggery zmienia się wraz z położeniem miejsca naciśnięcia triggera; im bliżej bocznej krawędzi przycisku LT lub RT najbliższej środka ekranu, tym nacisk jest większy),
 - Funkcja żyroskopu (w DirectInput żyroskop zastępuje jedną z gałek analogowych, natomiast w trybie Raw są to dodatkowe 2 osie),
 - Wybór gałki analogowej, która ma zostać zastąpiona przez żyroskop w trybie DirectInput,
-- Czułość żyroskopu.
+- Czułość żyroskopu,
+- Interwał czasu pomiędzy wysyłanymi raportami HID.
 
-
-![btgamepad1](https://github.com/DaveHanak/UMPAnUMiW-Projekt-BtGamepad/assets/72354597/7845692b-702a-4035-b743-7fa367564526)
-![btgamepad2](https://github.com/DaveHanak/UMPAnUMiW-Projekt-BtGamepad/assets/72354597/2b2efda5-d708-44f8-b2c9-e5891a5efe24)
-![btgamepad3](https://github.com/DaveHanak/UMPAnUMiW-Projekt-BtGamepad/assets/72354597/8701d30e-fbca-4c3d-be2b-2d2784bfa0e0)
+![Bt1](https://github.com/DaveHanak/UMPAnUMiW-Projekt-BtGamepad/assets/72354597/b67ddbac-baa5-4b66-afb3-b0cd2c7af3dd)
+![Bt2](https://github.com/DaveHanak/UMPAnUMiW-Projekt-BtGamepad/assets/72354597/cb4532f3-8272-4137-a96f-83a1c42d8907)
+![Bt3](https://github.com/DaveHanak/UMPAnUMiW-Projekt-BtGamepad/assets/72354597/c26b7e69-254c-431a-8b82-7b4a12ed76b8)
