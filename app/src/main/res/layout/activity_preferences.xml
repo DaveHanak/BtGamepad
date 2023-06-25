@@ -5,6 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pref_interval"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/intervalBar"
+        app:layout_constraintEnd_toEndOf="@+id/intervalBar"
+        app:layout_constraintStart_toStartOf="@+id/intervalBar" />
+
+    <TextView
+        android:id="@+id/intervalCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/intervalBar"
+        app:layout_constraintStart_toStartOf="@+id/intervalBar"
+        app:layout_constraintTop_toBottomOf="@+id/intervalBar" />
+
+    <SeekBar
+        android:id="@+id/intervalBar"
+        android:layout_width="166dp"
+        android:layout_height="24dp"
+        android:max="40"
+        android:min="5"
+        android:progress="10"
+        android:progressTint="@color/white"
+        android:thumbTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/sensitivityBar"
+        app:layout_constraintStart_toStartOf="@+id/sensitivityBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
+
     <RadioGroup
         android:id="@+id/radioGroup6"
         android:layout_width="wrap_content"
@@ -117,22 +152,6 @@
             android:text="@string/pref_side_r" />
     </RadioGroup>
 
-    <SeekBar
-        android:id="@+id/sensitivityBar"
-        android:layout_width="166dp"
-        android:layout_height="24dp"
-        android:max="400"
-        android:min="50"
-        android:progress="100"
-        android:progressTint="@color/white"
-        android:thumbTint="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/radioGroup8"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
-
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
@@ -182,6 +201,22 @@
         app:layout_constraintBottom_toTopOf="@+id/sensitivityBar"
         app:layout_constraintEnd_toEndOf="@+id/sensitivityBar"
         app:layout_constraintStart_toStartOf="@+id/sensitivityBar" />
+
+    <SeekBar
+        android:id="@+id/sensitivityBar"
+        android:layout_width="166dp"
+        android:layout_height="24dp"
+        android:max="400"
+        android:min="50"
+        android:progress="100"
+        android:progressTint="@color/white"
+        android:thumbTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
 
     <TextView
         android:id="@+id/sensitivityCounter"

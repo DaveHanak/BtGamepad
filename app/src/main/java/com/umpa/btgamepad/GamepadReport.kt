@@ -26,12 +26,4 @@ class GamepadReport(
             usageRzOrHatSwitch
         )
     }
-
-    enum class State {
-        Neutral, InProgress, Success, Failure
-    }
-
-    companion object {
-        var sendingState = State.Neutral
-    }
 }

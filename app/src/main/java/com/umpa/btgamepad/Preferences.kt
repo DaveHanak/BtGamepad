@@ -10,6 +10,7 @@ import java.io.File
 object Preferences {
     var gyroEnabled = false
     var gyroSensitivity = 1.0f
+    var reportInterval = 10L
     var directModeAnalogTriggers = true
     enum class GyroReplaceable {
         LeftThumbstick, RightThumbstick
@@ -25,6 +26,7 @@ object Preferences {
             GamepadInputWrapper.changeInputMode(GamepadInputWrapper.Mode.valueOf(prefs.mode))
             gyroEnabled = prefs.gyroEnabled
             gyroSensitivity = prefs.gyroSensitivity
+            reportInterval = prefs.reportInterval
             directModeAnalogTriggers = prefs.analogTriggers
             directModeGyroReplaces = GyroReplaceable.valueOf(prefs.gyroReplaces)
         } catch (_: Exception) {}
@@ -36,6 +38,7 @@ object Preferences {
                     GamepadInputWrapper.getMode().name,
                     gyroEnabled,
                     gyroSensitivity,
+                    reportInterval,
                     directModeAnalogTriggers,
                     directModeGyroReplaces.name
                 )

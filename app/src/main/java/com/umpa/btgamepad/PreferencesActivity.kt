@@ -18,6 +18,7 @@ class PreferencesActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener
         makeFullscreen(window)
 
         binding.sensitivityBar.setOnSeekBarChangeListener(this)
+        binding.intervalBar.setOnSeekBarChangeListener(this)
 
         binding.rModeDir.isChecked = GamepadInputWrapper.getMode() == GamepadInputWrapper.Mode.Direct
         binding.rModeRaw.isChecked = GamepadInputWrapper.getMode() == GamepadInputWrapper.Mode.Raw
@@ -33,6 +34,9 @@ class PreferencesActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener
 
         binding.sensitivityBar.progress = (Preferences.gyroSensitivity * 100).toInt()
         binding.sensitivityCounter.text = binding.sensitivityBar.progress.toString()
+
+        binding.intervalBar.progress = Preferences.reportInterval.toInt()
+        binding.intervalCounter.text = getString(R.string.ms, binding.intervalBar.progress)
 
         binding.back.setOnClickListener {
             finish()
@@ -106,20 +110,33 @@ class PreferencesActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener
 
     override fun onProgressChanged(seekbar: SeekBar?, progress: Int, fromUser: Boolean) {
         if (seekbar != null) {
-            binding.sensitivityCounter.text = progress.toString()
+            if (seekbar === binding.sensitivityBar) {
+                binding.sensitivityCounter.text = progress.toString()
+            } else if (seekbar === binding.intervalBar) {
+                binding.intervalCounter.text = getString(R.string.ms, progress)
+            }
         }
     }
 
     override fun onStartTrackingTouch(seekbar: SeekBar?) {
         if (seekbar != null) {
-            binding.sensitivityCounter.setTextColor(getColor(R.color.yellow_info))
+            if (seekbar === binding.sensitivityBar) {
+                binding.sensitivityCounter.setTextColor(getColor(R.color.yellow_info))
+            } else if (seekbar === binding.intervalBar) {
+                binding.intervalCounter.setTextColor(getColor(R.color.yellow_info))
+            }
         }
     }
 
     override fun onStopTrackingTouch(seekbar: SeekBar?) {
         if (seekbar != null) {
-            Preferences.gyroSensitivity = seekbar.progress.toFloat() / 100
-            binding.sensitivityCounter.setTextColor(getColor(R.color.white))
+            if (seekbar === binding.sensitivityBar) {
+                Preferences.gyroSensitivity = seekbar.progress.toFloat() / 100
+                binding.sensitivityCounter.setTextColor(getColor(R.color.white))
+            } else if (seekbar === binding.intervalBar) {
+                Preferences.reportInterval = seekbar.progress.toLong()
+                binding.intervalCounter.setTextColor(getColor(R.color.white))
+            }
         }
     }
 }

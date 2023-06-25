@@ -1,46 +1,39 @@
 package com.umpa.btgamepad
 
 import android.annotation.SuppressLint
-import android.bluetooth.BluetoothDevice
-import android.bluetooth.BluetoothHidDevice
-import java.util.*
+import kotlin.concurrent.thread
+import java.util.concurrent.TimeUnit
 
 object GamepadReporter {
-    private lateinit var timer: Timer
     private var isStarted = false
-    private const val reportInterval: Long = 5
     fun startReporting() {
         if (!isStarted) {
-            timer = Timer()
-            timer.scheduleAtFixedRate(object: TimerTask() {
-                override fun run() {
-                    if (GamepadDevice.isConnected) {
+            isStarted = true
+            thread(priority = Thread.MAX_PRIORITY) {
+                val reportIntervalNanos = Preferences.reportInterval * 1000000L
+                val sleepNanos = reportIntervalNanos / 100L
+                var nextSendTime = System.nanoTime() + reportIntervalNanos
+                while (isStarted) {
+                    if (GamepadDevice.isConnected && nextSendTime <= System.nanoTime()) {
+                        nextSendTime = System.nanoTime() + reportIntervalNanos
                         sendReport(GamepadInputWrapper.createReport())
                     }
+                    TimeUnit.NANOSECONDS.sleep(sleepNanos)
                 }
-            }, 0, reportInterval)
-            isStarted = true
+            }
         }
     }
     fun stopReporting() {
         if (isStarted) {
-            timer.cancel()
             isStarted = false
         }
     }
-
     @SuppressLint("MissingPermission")
     private fun sendReport(report: GamepadReport) {
-        GamepadReport.sendingState = GamepadReport.State.InProgress
-        val sent = GamepadDevice.btHidDevice?.sendReport(
+        GamepadDevice.btHidDevice?.sendReport(
             GamepadDevice.btDevice,
             report.id,
             report.data
         )
-        if (sent == true) {
-            GamepadReport.sendingState = GamepadReport.State.Success
-        } else {
-            GamepadReport.sendingState = GamepadReport.State.Failure
-        }
     }
 }
