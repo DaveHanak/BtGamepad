@@ -1,16 +1,25 @@
-# UMPAnUMiW-Projekt-BtGamepad
+# BtGamepad
 
-BtGamepad to aplikacja na urządzenia z systemem Android w wersji 9 i wzwyż. Pozwala niejako na zamianę telefonu w uniwersalne urządzenie HID typu gamepad, z którym komunikacja odbywa się poprzez Bluetooth. Gamepad, oprócz standardowych przycisków i gałek analogowych, posiada również opcję skorzystania z funkcji żyroskopu i wyboru trybu wprowadzania: trybu spełniającego wymagania API DirectInput typowo pod system Windows lub uniwersalnego dla aplikacji z własnym API do odczytu wejść z gamepada.
+BtGamepad is an application for devices running Android version 9 and above. It essentially turns your phone into a universal HID gamepad device, communicating via Bluetooth. In addition to standard buttons and analog sticks, the gamepad also features a gyroscope function and allows you to choose the input mode: one compatible with the DirectInput API, typically for Windows, or a universal mode for applications with custom APIs for reading HID-compliant gamepad inputs.
 
-Aby rozpocząć zabawę z padem, należy w widoku Menu nacisnąć przycisk START. Jeżeli aplikacji brakuje jakichś uprawnień, po wciśnięciu przycisku użytkownik zostanie najpierw poproszony o ich udzielenie. Postępując zgodnie z wyświetlanymi instrukcjami, użytkownik w końcu poproszony zostanie o połączenie się z urządzeniem, na którym zamierza używać pada. Po pomyślnym połączeniu można nacisnąć przycisk GAMEPAD i przenieść się do widoku umożliwiającego sterowanie. Ostatnie pomyślne połączenie pada zostanie zapamiętane, tak by po ponownym uruchomieniu aplikacji i naciśnięciu przycisku START móc bez problemu wznowić pracę gamepada. Przy włączonym padzie, przycisk STOP wstrzymuje jego pracę. Przejście do widoku Preferences jest możliwe tylko z zatrzymanym gamepadem i odbywa się poprzez naciśnięcie przycisku PREFERENCES w Menu. Widok Preferences umożliwia dostosowanie działania pada pod potrzeby użytkownika lub samej gry, która ma go używać.
+## Why does this even exist
 
-Dostępne opcje:
-- Trybu wprowadzania: DirectInput lub Raw (uniwersalny),
-- Analogowe lub cyfrowe triggery w trybie DirectInput (nacisk na analogowe triggery zmienia się wraz z położeniem miejsca naciśnięcia triggera; im bliżej bocznej krawędzi przycisku LT lub RT najbliższej środka ekranu, tym nacisk jest większy),
-- Funkcja żyroskopu (w DirectInput żyroskop zastępuje jedną z gałek analogowych, natomiast w trybie Raw są to dodatkowe 2 osie),
-- Wybór gałki analogowej, która ma zostać zastąpiona przez żyroskop w trybie DirectInput,
-- Czułość żyroskopu,
-- Interwał czasu pomiędzy wysyłanymi raportami HID.
+Originally, it was made as a university project with future development plans possibly taking it to the App Store. What stopped me in my tracks was the fact that mobile phones' Bluetooth modules aren't really up to the task of emulating a HID gamepad. You'll see for yourself that your ability to use the gamepad will be greatly affected by the quality of the signal, which is prone to a lot of interference from surrounding devices. Sending the HID reports in real time thus becomes a challenge impossible to overcome for your standard Android phone, resulting in delayed movements in the game, and your character falling off a cliff and dying horribly. Or maybe I'm just doing something wrong and it's entirely my own programming's fault - please let me know somehow if you manage to play something more action packed than strategy games with BtGamepad.
+
+## How to use
+
+To start using the gamepad, press the START button in the Menu view. If the application lacks certain permissions, pressing the button will first prompt the user to grant them. By following the on-screen instructions, the user will eventually be asked to connect to the device where the gamepad will be used. Once successfully connected, you can press the GAMEPAD button and proceed to the control view. The last successful gamepad connection is remembered so that after restarting the app and pressing START, the gamepad can resume operation seamlessly. With the gamepad active, pressing STOP pauses its operation. Accessing the Preferences view is only possible when the gamepad is stopped and can be done by pressing the PREFERENCES button in the Menu. The Preferences view allows customization of the gamepad’s functionality to suit the user’s needs or the game that will use it.
+
+## Available options:
+
+- Input mode: DirectInput or Raw (universal),
+- Analog or digital triggers in DirectInput mode (the pressure on analog triggers changes based on the position where the trigger is pressed; the closer to the edge of the LT or RT button nearest the center of the screen, the greater the pressure),
+- Gyroscope function (in DirectInput, the gyroscope replaces one of the analog sticks, while in Raw mode, it adds 2 additional axes),
+- Choice of analog stick to be replaced by the gyroscope in DirectInput mode,
+- Gyroscope sensitivity,
+- Time interval between sent HID reports.
+
+## Screenshots
 
 ![Bt1](https://github.com/DaveHanak/UMPAnUMiW-Projekt-BtGamepad/assets/72354597/b67ddbac-baa5-4b66-afb3-b0cd2c7af3dd)
 ![Bt2](https://github.com/DaveHanak/UMPAnUMiW-Projekt-BtGamepad/assets/72354597/cb4532f3-8272-4137-a96f-83a1c42d8907)
